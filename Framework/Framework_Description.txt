@@ -2,32 +2,46 @@ Preamble:
 - This framework is extensivly tested via ChatGPT/OpenAi how good or bad this works with other models - let me know.
 - You will propably not need all of the Headlines below. What you need and what you don't need will depend on the purpose of the GPT. You want a GPT that tells bedtime storys? Maybe it's a good idea to include a Persona. You want a GPT that translates EMail? You can propably ignore Persona.
 - Model_Config - Yes you cannot config the model via prompt. But still try to do it, the model will try to respect your intended Model Config. This works fine for temperature - even for dynamic config. But it also works OK for things like max_tokens. If you prompt: Max_Tokens = 1 the model will give you an answer using more than 1 token, but the model will be very short in the answer. The less contradictory ypou prompt is, the more your Model Config will be respected.
+- In my experience, a good prompt needs testing and iterational improvement. So don't expect the perfect prompt by just filling the bullets below.
+
+
+
 
 ***Persona***
-
-
+In the Persona section you can define a personalityc for your GPT like, name, gender and character traits. If you are not using ***Style of Speech*** you can also include this here. If you create simliar GPTs for diefferent audiance I recommand a seperate Style of Speech Section. Also if the GPT is ignoring the Style of Speech It might help to "reminde" the GPT in ***Persona*** about that.
 
 ***Role***
+Here you define the role the GPT should assume. Good roles are f.e.: You are a support agent. You answer questions. You are a coder. You are a teacher. A good role is connected to a knowledge and/or a group of tasks.
 
 ***Subject***
+Here you narrow down the context to a managable scope. A subject can be f.e.: IT, Cloud, AI, Python Coding etc. You could integrate the Subject into the role. I prefer to seperate the subject so I can dublicate GPTs that produce the same output for different subjects. Imagine a GPT assisting in Coding - you just change the Subject to C, C#, C++, Java or whatever. The same configuration applys und you get responses that are compareable between the GPTs.
 
 ***Knowledge***
+Here you add f.e. Websites the GPT should use. Imagine a Tutor for a certain training certification - you can add URL to the specific or sample question so that the GPT is not just relying on the model knowledge but also uses web requests to ground the answer. Also - when you add files to the the GPT configuration you can tell the GPT here the function of the added files or how to use it. KEEP IN MIND: wether or not you LLM is able to use this function might be connected to billing plans etc. Also the LLM might need explicit instructions to use the Knowledge.
 
 ***Input***
+Depending on the Role it might be helpfull to define the input the GPT will be confronted with. If the task will be always the same, defining the input might be helpful to use shorter prompts to start the task.
 
 ***Vision and Goal***
+I like to use this section to give an overall vision or goal to the GPT. Imagine a GPT for creating bedtime storys for you kids you might want the storys to be creative and not permutations of existing fairy tales - you could give this as a vision to the GPT. Or imagine a GPT that shall give you always factual correct knowledge and be very uncreative - this would also be a Vision.
 
 ***Problem-Handling***
+This is a tricky one. The GPT Assistent you can use when creating custom GPTs in ChatGPT is recommanding this. But prompting good error handling is very tricky. How could a GPT find out it has a problem? Just prompting: If you don't understand, ask! Never yields any success. But you can use this section for things like: If the user is asking several questions in a single message, don't ask any of it but request the user to ask just single questions. 
 
 ***Task***
+What should the GPT do for you? A lot of tasks will already be defined by the role. So if the role is just enough for you, you don't need this section. If you want certain responses, or the responses taggle specific things, this is the section for you. Imagine an IT Consultant. You will ask question on a high flight level und you always want to keep an eye on best practice you can instruct the GPT to always include a best practice example in the answer.
 
 ***Style of Speech***
+I use this section most of the time for adjusting the output to the audiance. F.e. Generate you answer for people who have no experience in the ***Subject***. or Always answer in the language you are spoken to. Or Generate your answers as XML/JSON. Or Make your answer a Java Script giving me the answer.
 
 ***Output***
+User this Section to generate the outputs in a certain schema like: Introduction - Answer - Conclusion - Internet Links. If you use ***Style of Speech*** and ***Output*** at the same time this could get tricky so I would recommand not using both at the same time.
 
 ***Reliability Scale***
+Sometimes you might need a clue on how much you can trust the answer of the GPT. In this Section you can define a scale which the GPT generates to give you a clue about the trustworthyness. F.E.: This scale has 0 as lowest values and 100 as highest value. If the answer you are generating has a broad consense in sience assigne a high value. If the answer has controversial positions in sience use a low value.   
 
 ***Ethics***
+Use this section to define the Ethics for your GPT. For example you are creating a GPT to check/challenge your argumentations you might want to tell the GPT it shall not argument about religion or take a position pro-violence. Most models have already ethical rules in place, but if you need more specific ethics, this is your section.
 
 ***Model_Config***
 temperature : 1.0

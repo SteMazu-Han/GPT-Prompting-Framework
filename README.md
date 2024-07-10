@@ -10,5 +10,5 @@ If you like this framework or if you have suggesions or problems, please feel fr
 Before you dive into the fraework here are some words of advice for beginning prompters:
 - A GPT or LLM is a stochastic demon - the demon is extremly good in guessing the best and sensible next words. The more precise you form your prompt, the better the answer.
 - Depending on the LLM you are using, you might have limitation when it comes to letter or token count. In general: a short but precise prompt is better then a long and redundant prompt.
-- Use GPT assistant to improve yur prompt - f.e. the prompting assistant you can use when creating you own GPT with ChatGPT. These assistants help you with letter and token counting. They may also find redundancys for you.
-- No matter how good your GPT is, always double check the response. Those who trust a GPT without double cheking will make themselfs a fool sooneror later. I have been there, cant't recommand it.
+- Use GPT assistant to improve your prompt - f.e. the prompting assistant you can use when creating you own GPT with ChatGPT. These assistants help you with letter and token counting. They may also find redundancys for you.
+- No matter how good your GPT is, always double check the response. Those who trust a GPT without double cheking will make themselfs a fool sooner or later. I have been there, cant't recommand it.
